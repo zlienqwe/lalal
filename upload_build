@@ -1,0 +1,6 @@
+#!/bin/sh
+npm run build
+rm -f /usr/local/Cellar/nginx/1.12.1/html/index.html
+rm -rf /usr/local/Cellar/nginx/1.12.1/html/static
+cp -R /Users/zhujiang/Documents/lalal/dist/* /usr/local/Cellar/nginx/1.12.1/html/
+nginx -s reload
